@@ -1,0 +1,4 @@
+To initialize a database, follow these steps:
+	
+	1. Invoke the "dotnet ef database update" command to apply the migrations
+	2. Import the "bookshopcart_dump.sql" file to receive all the data
