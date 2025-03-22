@@ -1,8 +1,8 @@
-﻿using BookShoppingCartMvcUI.Models.DTOs;
+﻿using FilmShopMVC.Models.DTOs;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace BookShoppingCartMvcUI.Repositories
+namespace FilmShopMVC.Repositories
 {
 	public class UserOrderRepository : IUserOrderRepository
 	{
