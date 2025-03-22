@@ -1,4 +1,4 @@
-﻿namespace BookShoppingCartMvcUI.Constants;
+﻿namespace FilmShopMVC.Constants;
 
 public enum PaymentMethods
 {

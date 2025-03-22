@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BookShoppingCartMvcUI.Controllers
+namespace FilmShopMVC.Controllers
 {
 	[Authorize(Roles = nameof(Roles.Admin))]
 	public class StockController : Controller
@@ -19,12 +19,12 @@ namespace BookShoppingCartMvcUI.Controllers
 			return View(stocks);
 		}
 
-		public async Task<IActionResult> ManangeStock(int bookId)
+		public async Task<IActionResult> ManangeStock(int filmId)
 		{
-			var existingStock = await _stockRepo.GetStockByBookId(bookId);
+			var existingStock = await _stockRepo.GetStockByBookId(filmId);
 			var stock = new StockDTO
 			{
-				BookId = bookId,
+				FilmId = filmId,
 				Quantity = existingStock != null
 			? existingStock.Quantity : 0
 			};

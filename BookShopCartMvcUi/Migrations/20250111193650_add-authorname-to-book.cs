@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace BookShoppingCartMvcUI.Migrations
+namespace FilmShopMVC.Migrations
 {
     /// <inheritdoc />
     public partial class addauthornametobook : Migration
@@ -11,8 +11,8 @@ namespace BookShoppingCartMvcUI.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AddColumn<string>(
-                name: "AuthorName",
-                table: "Book",
+                name: "DirectorName",
+                table: "Film",
                 type: "varchar(40)",
                 maxLength: 40,
                 nullable: false,
@@ -24,8 +24,8 @@ namespace BookShoppingCartMvcUI.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "AuthorName",
-                table: "Book");
+                name: "DirectorName",
+                table: "Film");
         }
     }
 }

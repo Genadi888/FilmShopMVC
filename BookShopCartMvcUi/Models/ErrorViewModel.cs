@@ -1,4 +1,4 @@
-namespace BookShoppingCartMvcUI.Models
+namespace FilmShopMVC.Models
 {
     public class ErrorViewModel
     {

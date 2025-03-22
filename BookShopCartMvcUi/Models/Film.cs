@@ -1,19 +1,19 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-namespace BookShoppingCartMvcUI.Models
+namespace FilmShopMVC.Models
 {
-    [Table("Book")]
-    public class Book
+    [Table("Film")]
+    public class Film
     {
         public int Id { get; set; }
 
         [Required]
         [MaxLength(200)]
-        public string? BookName { get; set; }
+        public string? FilmName { get; set; }
 
         [Required]
         [MaxLength(200)]
-        public string? AuthorName { get; set; }
+        public string? DirectorName { get; set; }
 
         [Required]
         public double Price { get; set; }

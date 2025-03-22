@@ -1,8 +1,8 @@
-﻿namespace BookShoppingCartMvcUI
+﻿namespace FilmShopMVC
 {
     public interface IHomeRepository
     {
-        Task<IEnumerable<Book>> GetBooks(string sTerm ="", int genreId = 0);
+        Task<IEnumerable<Film>> GetFilms(string sTerm ="", int genreId = 0);
         Task<IEnumerable<Genre>> Genres();
     }
 }

@@ -12,17 +12,17 @@
 
 <table class="table table-bordered">
     <tr>
-        <th>Book</th>
+        <th>Film</th>
         <th>Stock</th>
         <th>Actions</th>
     </tr>
     @foreach (var item in Model)
     {
         <tr>
-            <td>@item.BookName</td>
+            <td>@item.FilmName</td>
             <td>@item.Quantity</td>
             <td>
-                <a asp-action="ManangeStock" asp-controller="Stock" asp-route-bookId="@item.BookId" class="btn btn-info"> Update Stock</a>
+                <a asp-action="ManangeStock" asp-controller="Stock" asp-route-bookId="@item.FilmId" class="btn btn-info"> Update Stock</a>
             </td>
         </tr>
     }

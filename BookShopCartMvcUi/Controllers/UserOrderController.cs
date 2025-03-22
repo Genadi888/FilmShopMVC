@@ -1,8 +1,8 @@
-﻿using BookShoppingCartMvcUI.Repositories;
+﻿using FilmShopMVC.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BookShoppingCartMvcUI.Controllers
+namespace FilmShopMVC.Controllers
 {
     [Authorize]
     public class UserOrderController : Controller

@@ -1,6 +1,6 @@
 ﻿using Microsoft.Build.Framework;
 using System.ComponentModel.DataAnnotations.Schema;
-namespace BookShoppingCartMvcUI.Models
+namespace FilmShopMVC.Models
 {
     [Table("ShoppingCart")]
     public class ShoppingCart

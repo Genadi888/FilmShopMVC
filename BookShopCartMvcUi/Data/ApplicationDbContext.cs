@@ -1,9 +1,9 @@
-﻿using BookShoppingCartMvcUI.Models;
+﻿using FilmShopMVC.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace BookShoppingCartMvcUI.Data
+namespace FilmShopMVC.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
@@ -11,7 +11,7 @@ namespace BookShoppingCartMvcUI.Data
             : base(options)
         {
         }
-        public DbSet<Book> Books { get; set; }
+        public DbSet<Film> Films { get; set; }
         public DbSet<Genre> Genres { get; set; }
         public DbSet<ShoppingCart> ShoppingCarts { get; set; }
         public DbSet<CartDetail> CartDetails { get; set; }

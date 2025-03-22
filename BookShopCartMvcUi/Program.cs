@@ -1,5 +1,5 @@
-using BookShoppingCartMvcUI;
-using BookShoppingCartMvcUI.Repositories;
+using FilmShopMVC;
+using FilmShopMVC.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 //using Pomelo.EntityFrameworkCore.MySql;

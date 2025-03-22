@@ -19,8 +19,8 @@
 					@foreach (var item in Model.OrderDetail)
 					{
 						<tr>
-							<td>@item.Book.BookName</td>
-							<td>@item.Book.Genre.GenreName</td>
+							<td>@item.Film.FilmName</td>
+							<td>@item.Film.Genre.GenreName</td>
 							<td>@item.UnitPrice</td>
 							<td>@item.Quantity</td>
 							<td>@(item.Quantity * item.UnitPrice)</td>

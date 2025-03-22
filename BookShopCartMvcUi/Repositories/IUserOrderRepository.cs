@@ -1,6 +1,6 @@
-﻿using BookShoppingCartMvcUI.Models.DTOs;
+﻿using FilmShopMVC.Models.DTOs;
 
-namespace BookShoppingCartMvcUI.Repositories;
+namespace FilmShopMVC.Repositories;
 
 public interface IUserOrderRepository
 {

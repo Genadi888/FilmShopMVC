@@ -1,7 +1,7 @@
 ﻿using Microsoft.Build.Framework;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace BookShoppingCartMvcUI.Models
+namespace FilmShopMVC.Models
 {
     [Table("OrderDetails")]
     public class OrderDetail
@@ -12,7 +12,7 @@ namespace BookShoppingCartMvcUI.Models
         public int OrderId { get; set; }
 
         [Required]
-        public int BookId { get; set; }
+        public int FilmId { get; set; }
 
         [Required]
         public int Quantity { get; set; }
@@ -22,7 +22,7 @@ namespace BookShoppingCartMvcUI.Models
 
         public Order Order { get; set; }
 
-        public Book Book { get; set; }
+        public Film Film { get; set; }
 
     }
 }

@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace BookShoppingCartMvcUI.Migrations
+namespace FilmShopMVC.Migrations
 {
     /// <inheritdoc />
     public partial class part12_third_fixes : Migration

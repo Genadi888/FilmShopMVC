@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace BookShoppingCartMvcUI.Migrations
+namespace FilmShopMVC.Migrations
 {
     /// <inheritdoc />
     public partial class migstockmgt : Migration
@@ -26,7 +26,7 @@ namespace BookShoppingCartMvcUI.Migrations
                     table.ForeignKey(
                         name: "FK_Stock_Book_BookId",
                         column: x => x.BookId,
-                        principalTable: "Book",
+                        principalTable: "Film",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 })
@@ -35,7 +35,7 @@ namespace BookShoppingCartMvcUI.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Stock_BookId",
                 table: "Stock",
-                column: "BookId",
+                column: "FilmId",
                 unique: true);
         }
 

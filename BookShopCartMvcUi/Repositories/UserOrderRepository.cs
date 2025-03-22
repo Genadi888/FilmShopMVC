@@ -1,8 +1,8 @@
-﻿using BookShoppingCartMvcUI.Models.DTOs;
+﻿using FilmShopMVC.Models.DTOs;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace BookShoppingCartMvcUI.Repositories
+namespace FilmShopMVC.Repositories
 {
 	public class UserOrderRepository : IUserOrderRepository
 	{
@@ -57,7 +57,7 @@ namespace BookShoppingCartMvcUI.Repositories
 			var orders = _db.Orders
 						   .Include(x => x.OrderStatus)
 						   .Include(x => x.OrderDetails)
-						   .ThenInclude(x => x.Book)
+						   .ThenInclude(x => x.Film)
 						   .ThenInclude(x => x.Genre).AsQueryable();
 			if (!getAll)
 			{

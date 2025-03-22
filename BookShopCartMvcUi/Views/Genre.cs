@@ -1,4 +1,4 @@
-﻿namespace BookShoppingCartMvcUI.Views
+﻿namespace FilmShopMVC.Views
 {
     public class Genre
     {

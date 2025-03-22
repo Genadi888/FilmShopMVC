@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BookShoppingCartMvcUI.Controllers
+namespace FilmShopMVC.Controllers
 {
     [Authorize]
     public class CartController : Controller
@@ -12,17 +12,17 @@ namespace BookShoppingCartMvcUI.Controllers
         {
             _cartRepo = cartRepo;
         }
-        public async Task<IActionResult> AddItem(int bookId, int qty = 1, int redirect = 0)
+        public async Task<IActionResult> AddItem(int filmId, int qty = 1, int redirect = 0)
         {
-            var cartCount = await _cartRepo.AddItem(bookId, qty);
+            var cartCount = await _cartRepo.AddItem(filmId, qty);
             if (redirect == 0)
                 return Ok(cartCount);
             return RedirectToAction("GetUserCart");
         }
 
-        public async Task<IActionResult> RemoveItem(int bookId)
+        public async Task<IActionResult> RemoveItem(int filmId)
         {
-            var cartCount = await _cartRepo.RemoveItem(bookId);
+            var cartCount = await _cartRepo.RemoveItem(filmId);
             return RedirectToAction("GetUserCart");
         }
         public async Task<IActionResult> GetUserCart()

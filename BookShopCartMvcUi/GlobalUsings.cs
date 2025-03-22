@@ -1,5 +1,5 @@
-﻿global using BookShoppingCartMvcUI.Data;
-global using BookShoppingCartMvcUI.Models;
-global using BookShoppingCartMvcUI.Models.DTOs;
-global using BookShoppingCartMvcUI.Repositories;
-global using BookShoppingCartMvcUI.Constants;
+﻿global using FilmShopMVC.Data;
+global using FilmShopMVC.Models;
+global using FilmShopMVC.Models.DTOs;
+global using FilmShopMVC.Repositories;
+global using FilmShopMVC.Constants;

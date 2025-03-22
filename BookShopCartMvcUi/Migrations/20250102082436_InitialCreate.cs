@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace BookShoppingCartMvcUI.Migrations
+namespace FilmShopMVC.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration
@@ -244,7 +244,7 @@ namespace BookShoppingCartMvcUI.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Book",
+                name: "Film",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -309,7 +309,7 @@ namespace BookShoppingCartMvcUI.Migrations
                     table.ForeignKey(
                         name: "FK_CartDetail_Book_BookId",
                         column: x => x.BookId,
-                        principalTable: "Book",
+                        principalTable: "Film",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -338,7 +338,7 @@ namespace BookShoppingCartMvcUI.Migrations
                     table.ForeignKey(
                         name: "FK_OrderDetails_Book_BookId",
                         column: x => x.BookId,
-                        principalTable: "Book",
+                        principalTable: "Film",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -389,13 +389,13 @@ namespace BookShoppingCartMvcUI.Migrations
 
             migrationBuilder.CreateIndex(
                 name: "IX_Book_GenreId",
-                table: "Book",
+                table: "Film",
                 column: "GenreId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_CartDetail_BookId",
                 table: "CartDetail",
-                column: "BookId");
+                column: "FilmId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_CartDetail_ShoppingCartId",
@@ -410,7 +410,7 @@ namespace BookShoppingCartMvcUI.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_OrderDetails_BookId",
                 table: "OrderDetails",
-                column: "BookId");
+                column: "FilmId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_OrderDetails_OrderId",
@@ -452,7 +452,7 @@ namespace BookShoppingCartMvcUI.Migrations
                 name: "ShoppingCart");
 
             migrationBuilder.DropTable(
-                name: "Book");
+                name: "Film");
 
             migrationBuilder.DropTable(
                 name: "Order");

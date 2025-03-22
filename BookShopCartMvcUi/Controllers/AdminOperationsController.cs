@@ -1,11 +1,11 @@
-﻿using BookShoppingCartMvcUI.Constants;
-using BookShoppingCartMvcUI.Models.DTOs;
-using BookShoppingCartMvcUI.Repositories;
+﻿using FilmShopMVC.Constants;
+using FilmShopMVC.Models.DTOs;
+using FilmShopMVC.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace BookShoppingCartMvcUI.Controllers;
+namespace FilmShopMVC.Controllers;
 
 [Authorize(Roles = nameof(Roles.Admin))]
 public class AdminOperationsController : Controller

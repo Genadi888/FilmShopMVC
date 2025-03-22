@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace BookShoppingCartMvcUI.Repositories;
+namespace FilmShopMVC.Repositories;
 
 public interface IGenreRepository
 {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.Build.Framework;
 using System.ComponentModel.DataAnnotations.Schema;
-namespace BookShoppingCartMvcUI.Models
+namespace FilmShopMVC.Models
 {
     [Table("CartDetail")]
     public class CartDetail
@@ -11,7 +11,7 @@ namespace BookShoppingCartMvcUI.Models
         public int ShoppingCartId { get; set; }
 
         [Required]
-        public int BookId { get; set; }
+        public int FilmId { get; set; }
 
         [Required]
         public int Quantity { get; set; }
@@ -19,7 +19,7 @@ namespace BookShoppingCartMvcUI.Models
         [Required]
         public double UnitPrice { get; set; }
 
-        public Book Book { get; set; }
+        public Film Film { get; set; }
 
         public ShoppingCart ShoppingCart { get; set; }
     }

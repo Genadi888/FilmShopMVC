@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace BookShoppingCartMvcUI.Migrations
+namespace FilmShopMVC.Migrations
 {
     /// <inheritdoc />
     public partial class fixednamesmaxlength : Migration
@@ -11,8 +11,8 @@ namespace BookShoppingCartMvcUI.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AlterColumn<string>(
-                name: "BookName",
-                table: "Book",
+                name: "FilmName",
+                table: "Film",
                 type: "varchar(200)",
                 maxLength: 200,
                 nullable: false,
@@ -23,8 +23,8 @@ namespace BookShoppingCartMvcUI.Migrations
                 .OldAnnotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.AlterColumn<string>(
-                name: "AuthorName",
-                table: "Book",
+                name: "DirectorName",
+                table: "Film",
                 type: "varchar(200)",
                 maxLength: 200,
                 nullable: false,
@@ -39,8 +39,8 @@ namespace BookShoppingCartMvcUI.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AlterColumn<string>(
-                name: "BookName",
-                table: "Book",
+                name: "FilmName",
+                table: "Film",
                 type: "varchar(40)",
                 maxLength: 40,
                 nullable: false,
@@ -51,8 +51,8 @@ namespace BookShoppingCartMvcUI.Migrations
                 .OldAnnotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.AlterColumn<string>(
-                name: "AuthorName",
-                table: "Book",
+                name: "DirectorName",
+                table: "Film",
                 type: "varchar(40)",
                 maxLength: 40,
                 nullable: false,

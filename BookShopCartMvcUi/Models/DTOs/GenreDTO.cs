@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BookShoppingCartMvcUI.Models.DTOs
+namespace FilmShopMVC.Models.DTOs
 {
     public class GenreDTO
     {

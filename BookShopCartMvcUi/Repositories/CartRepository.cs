@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace BookShoppingCartMvcUI.Repositories
+namespace FilmShopMVC.Repositories
 {
     public class CartRepository : ICartRepository
     {
@@ -17,7 +17,7 @@ namespace BookShoppingCartMvcUI.Repositories
             _httpContextAccessor = httpContextAccessor;
         }
 
-        public async Task<int> AddItem(int bookId, int qty)
+        public async Task<int> AddItem(int filmId, int qty)
         {
             string userId = GetUserId();
             using var transaction = _db.Database.BeginTransaction();
@@ -41,17 +41,17 @@ namespace BookShoppingCartMvcUI.Repositories
 
                 // cart detail section
                 var cartItem = _db.CartDetails
-                                  .FirstOrDefault(a => a.ShoppingCartId == cart.Id && a.BookId == bookId);
+                                  .FirstOrDefault(a => a.ShoppingCartId == cart.Id && a.FilmId == filmId);
                 if (cartItem is not null)
                 {
                     cartItem.Quantity += qty;
                 }
                 else
                 {
-                    var book = _db.Books.Find(bookId);
+                    var book = _db.Films.Find(filmId);
                     cartItem = new CartDetail
                     {
-                        BookId = bookId,
+                        FilmId = filmId,
                         ShoppingCartId = cart.Id,
                         Quantity = qty,
                         UnitPrice = book.Price //it is a new line after update
@@ -69,7 +69,7 @@ namespace BookShoppingCartMvcUI.Repositories
 
         }
 
-        public async Task<int> RemoveItem(int bookId)
+        public async Task<int> RemoveItem(int filmId)
         {
             //using var transaction = _db.Database.BeginTransaction();
             string userId = GetUserId();
@@ -89,7 +89,7 @@ namespace BookShoppingCartMvcUI.Repositories
 
                 // cart detail section
                 var cartItem = _db.CartDetails
-                                  .FirstOrDefault(a => a.ShoppingCartId == cart.Id && a.BookId == bookId);
+                                  .FirstOrDefault(a => a.ShoppingCartId == cart.Id && a.FilmId == filmId);
                 if (cartItem is null)
                 {
                     throw new InvalidOperationException("Not items in cart");
@@ -121,10 +121,10 @@ namespace BookShoppingCartMvcUI.Repositories
             }
             var shoppingCart = await _db.ShoppingCarts
                                 .Include(a => a.CartDetails)
-                                .ThenInclude(a => a.Book)
+                                .ThenInclude(a => a.Film)
                                 .ThenInclude(a => a.Stock)
                                 .Include(a => a.CartDetails)
-                                .ThenInclude(a => a.Book)
+                                .ThenInclude(a => a.Film)
                                 .ThenInclude(a => a.Genre)
                                 .Where(a => a.UserId == userId).FirstOrDefaultAsync();
             return shoppingCart;
@@ -200,7 +200,7 @@ namespace BookShoppingCartMvcUI.Repositories
                 {
                     var orderDetail = new OrderDetail
                     {
-                        BookId = item.BookId,
+                        FilmId = item.FilmId,
                         OrderId = order.Id,
                         Quantity = item.Quantity,
                         UnitPrice = item.UnitPrice
@@ -209,7 +209,7 @@ namespace BookShoppingCartMvcUI.Repositories
 
                     // update stock here
 
-                    var stock = await _db.Stocks.FirstOrDefaultAsync(a => a.BookId == item.BookId);
+                    var stock = await _db.Stocks.FirstOrDefaultAsync(a => a.FilmId == item.FilmId);
                     if (stock == null)
                     {
                         throw new InvalidOperationException("Stock is null");

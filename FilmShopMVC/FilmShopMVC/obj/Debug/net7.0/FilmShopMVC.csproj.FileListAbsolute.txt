@@ -1,0 +1,9 @@
+C:\Users\PC\source\repos\FilmShopMVC\FilmShopMVC\FilmShopMVC\obj\Debug\net7.0\FilmShopMVC.csproj.AssemblyReference.cache
+C:\Users\PC\source\repos\FilmShopMVC\FilmShopMVC\FilmShopMVC\obj\Debug\net7.0\FilmShopMVC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\source\repos\FilmShopMVC\FilmShopMVC\FilmShopMVC\obj\Debug\net7.0\FilmShopMVC.AssemblyInfoInputs.cache
+C:\Users\PC\source\repos\FilmShopMVC\FilmShopMVC\FilmShopMVC\obj\Debug\net7.0\FilmShopMVC.AssemblyInfo.cs
+C:\Users\PC\source\repos\FilmShopMVC\FilmShopMVC\FilmShopMVC\obj\Debug\net7.0\FilmShopMVC.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\FilmShopMVC\FilmShopMVC\FilmShopMVC\obj\Debug\net7.0\FilmShopMVC.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\PC\source\repos\FilmShopMVC\FilmShopMVC\FilmShopMVC\obj\Debug\net7.0\FilmShopMVC.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\PC\source\repos\FilmShopMVC\FilmShopMVC\FilmShopMVC\obj\Debug\net7.0\FilmShopMVC.RazorAssemblyInfo.cache
+C:\Users\PC\source\repos\FilmShopMVC\FilmShopMVC\FilmShopMVC\obj\Debug\net7.0\FilmShopMVC.RazorAssemblyInfo.cs

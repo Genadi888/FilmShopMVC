@@ -1,10 +1,10 @@
-﻿namespace BookShoppingCartMvcUI.Repositories
+﻿namespace FilmShopMVC.Repositories
 {
     public interface ICartRepository
     {
-        Task<int> AddItem(int bookId, int qty);
+        Task<int> AddItem(int filmId, int qty);
 
-        Task<int> RemoveItem(int bookId);
+        Task<int> RemoveItem(int filmId);
 
         Task<ShoppingCart> GetUserCart();
 

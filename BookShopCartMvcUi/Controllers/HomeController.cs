@@ -1,9 +1,9 @@
-﻿using BookShoppingCartMvcUI.Models;
-using BookShoppingCartMvcUI.Models.DTOs;
+﻿using FilmShopMVC.Models;
+using FilmShopMVC.Models.DTOs;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace BookShoppingCartMvcUI.Controllers
+namespace FilmShopMVC.Controllers
 {
     public class HomeController : Controller
     {
@@ -17,11 +17,11 @@ namespace BookShoppingCartMvcUI.Controllers
 
         public async Task<IActionResult> Index(string sterm="", int genreId=0)
         {
-            IEnumerable<Book> books = await _homeRepository.GetBooks(sterm, genreId);
+            IEnumerable<Film> books = await _homeRepository.GetFilms(sterm, genreId);
             IEnumerable<Genre> genres = await _homeRepository.Genres();
-            BookDisplayModel bookModel = new BookDisplayModel
+            FilmDisplayModel bookModel = new FilmDisplayModel
             {
-                Books = books,
+                Films = books,
                 Genres = genres,
                 STerm = sterm,
                 GenreId = genreId
