@@ -38,21 +38,21 @@
                         @* Increase Quantity button should be invisible if not enough stock*@
                         @if (item.Quantity < item.Film.Stock.Quantity)
                         {
-                            <a class="btn btn-info" href="/Cart/AddItem?bookId=@item.FilmId&&redirect=1">+</a>
+                            <a class="btn btn-info" href="/Cart/AddItem?filmId=@item.FilmId&&redirect=1">+</a>
                         }
                         else
                         {
                             <span style="border: 1px solid;padding: 8px 8px;color: red;border-radius: 5px;margin-right:4px">Out of stock </span>
                         }
                         @* Decrement button *@
-                        <a class="btn btn-info" href="/cart/removeitem?bookid=@item.FilmId">-</a>
+                        <a class="btn btn-info" href="/cart/removeitem?filmid=@item.FilmId">-</a>
                     </td>
                 </tr>
             }
         </table>
 
         <div class="my-2">
-            <h5>Total(INR): </h5>
+            <h5>Total(BGN): </h5>
             @(Model.CartDetails.Select(item => item.Film.Price * item.Quantity).Sum())
         </div>
 

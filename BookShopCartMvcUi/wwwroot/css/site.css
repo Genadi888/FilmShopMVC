@@ -20,3 +20,7 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+body > nav {
+    background-color: #93251a !important;
+}

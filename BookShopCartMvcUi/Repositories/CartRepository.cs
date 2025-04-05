@@ -48,13 +48,13 @@ namespace FilmShopMVC.Repositories
                 }
                 else
                 {
-                    var book = _db.Films.Find(filmId);
+                    var film = _db.Films.Find(filmId);
                     cartItem = new CartDetail
                     {
                         FilmId = filmId,
                         ShoppingCartId = cart.Id,
                         Quantity = qty,
-                        UnitPrice = book.Price //it is a new line after update
+                        UnitPrice = film.Price //it is a new line after update
                     };
                     _db.CartDetails.Add(cartItem);
                 }
@@ -63,6 +63,7 @@ namespace FilmShopMVC.Repositories
             }
             catch (Exception ex)
             {
+                
             }
             var cartItemCount = await GetCartItemCount(userId);
             return cartItemCount;

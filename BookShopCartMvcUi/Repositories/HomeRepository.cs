@@ -25,8 +25,8 @@ namespace FilmShopMVC.Repositories
                          on film.GenreId equals genre.Id
                          join stock in _db.Stocks
                          on film.Id equals stock.FilmId
-                         into book_stocks
-                         from bookWithStock in book_stocks.DefaultIfEmpty()
+                         into film_stocks
+                         from bookWithStock in film_stocks.DefaultIfEmpty()
                          where string.IsNullOrWhiteSpace(sTerm) || (film!= null && film.FilmName.ToLower().StartsWith(sTerm)) 
                          select new Film()
                          {
